@@ -5,7 +5,7 @@ pipeline {
     }
      stage('sonarqube scan'){
     steps{
-        sh 'mvn sonar:sonar'
+        sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=fri2006_week16-code1'
     }
 }
         stage('all maven commands'){
